@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<!--
+    Copyright (c) 2012-2014 Adobe Systems Incorporated. All rights reserved.
+
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-tap-highlight" content="no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/w3.css" />
+        <link rel="stylesheet" type="text/css" href="css/eCracker.css" />
+        <title>eCracker</title>
+    </head>
+    
+    <body style="background-color:white">
+          <script type="text/javascript">
+   
+            function play(){
+                var audio = document.getElementById("audio");
+                audio.play();
+                document.getElementById("stopButton").style.display = "block";
+                
+            }
+            function stop(){
+                var audio = document.getElementById("audio");
+                audio.pause();
+                audio.currentTime = 0;
+              document.getElementById("stopButton").style.display = "none";
+            }
+          </script>
+              
+          <div class="appBody">
+            <div class="w3-row">
+                <div class="w3-col l1 m0 s0">
+                    &nbsp    
+                </div>
+                <div class="w3-col l10 m12 s12" style="margin-top:40px">
+                    <div class="appText">
+                        
+                    </div>                
+                    <div class="firstRowCrackers w3-card-4">
+                        <input type="image" src="./img/firecracker1.png" class="f1" onclick="play();">
+                        
+                    </div>
+                    <div id="stopButton" style="margin-top:20px;display:none;padding:0px;width:100px">
+                        <input type="button" value="Stop" onclick="stop();" style="border-radius:10px;width:100%" class="w3-red w3-btn">                       
+                    </div>
+                    
+                    <div class="text">
+                        
+                        <audio id="audio" src="./audio/f1soud.mp3" ></audio>
+                        <p style="font-size:10px" class="textIntro">A mobile firecracker that is much safer than a real one</p>
+                    </div>
+                </div>
+                <div class="w3-col l10 m12 s12">
+                    &nbsp
+                </div>
+            </div>
+          </div>
+            
+  
+        <script type="text/javascript" src="cordova.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript">
+            app.initialize();
+        </script>
+    </body>
+</html>
